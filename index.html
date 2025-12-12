@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Love A 🎉</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Intro Overlay -->
+<div class="intro">
+  <h2>🎉 Happy Birthday, My Love! 🎉</h2>
+  <p>Get ready for a special surprise…</p>
+</div>
+
+<h1>Happy Birthday, My Love! 🎂</h1>
+<p>You are the light of my life, the smile in my heart, and the joy in every moment you share. 💖</p>
+
+<div class="gift-box" onclick="triggerSurprise()"></div>
+
+<button class="btn" onclick="showMessage()">🎁 Open Your Gift</button>
+
+<div id="messageBox">
+  <h2>💖 Happy Birthday, Aishwariya! 💖</h2>
+  <p> On this special day, I wish you endless joy, laughter that never ends, and all the love your heart can hold! 🌸💞  
+    May your dreams come true, your smile shine brighter than the stars ✨🌟, and every moment of your life be filled with happiness, surprises, and sweet memories 🎁🎉.  
+    You are my sunshine ☀️, my happiness 🌈, and the most precious part of my life 💝.  
+    Celebrate, laugh, dance 💃🕺, and enjoy every magical second of your day! 🍰🎂🎈💫💐❤️</p>
+  
+  <div class="cake">
+    <!-- Cake layers -->
+    <div class="layer layer-bottom"></div>
+    <div class="layer layer-middle"></div>
+    <div class="layer layer-top"></div>
+    
+    <!-- Candles -->
+    <div class="candles">
+      <div class="candle"><div class="flame"></div></div>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="countdown" id="countdown"></div>
+
+<button class="btn" onclick="window.location.href='gallery.html'">📸 View Our Gallery</button>
+
+<div class="hearts" id="hearts"></div>
+
+<button class="btn" id="musicBtn" onclick="toggleMusic()">▶ Play Music</button>
+<audio id="bgMusic" loop>
+  <source src="happy-birthday-314197.mp3" type="audio/mpeg">
+</audio>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
