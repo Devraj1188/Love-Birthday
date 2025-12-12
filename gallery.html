@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Birthday Gallery 🎉</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+  /* ===== Base ===== */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fad0c4);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    padding: 2rem;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  h1 {
+    color: #d63384;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease 0.3s, transform 1s ease 0.3s;
+  }
+
+  .gallery img,
+  .gallery video {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+  }
+  .gallery img:hover,
+  .gallery video:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+
+  .btn {
+    margin-top: 2rem;
+    background: linear-gradient(45deg, #ff4d88, #ff1493);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease 0.6s, transform 1s ease 0.6s;
+  }
+  .btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+  }
+
+  /* ===== Hearts Background ===== */
+  .hearts {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: pink;
+    animation: float 10s linear infinite;
+    clip-path: polygon(50% 0%, 100% 40%, 80% 100%, 50% 80%, 20% 100%, 0% 40%);
+  }
+  @keyframes float {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-800px) scale(0.5); opacity: 0; }
+  }
+
+  /* ===== Intro Overlay ===== */
+  .intro {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    flex-direction: column;
+    animation: fadeOut 2s ease forwards;
+    animation-delay: 3s; /* overlay disappears after 3s */
+  }
+  .intro h2 {
+    font-size: 3rem;
+    color: #ff4d88;
+    animation: pop 1.2s ease infinite alternate;
+  }
+  @keyframes pop {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+  }
+  @keyframes fadeOut {
+    to { opacity: 0; visibility: hidden; }
+  }
+
+  /* Reveal class toggled by JS */
+  .reveal h1,
+  .reveal .gallery,
+  .reveal .btn {
+    opacity: 1;
+    transform: none;
+  }
+</style>
+</head>
+<body>
+  <!-- Intro Overlay -->
+  <div class="intro">
+    <h2>🎉 Happy Birthday Aishwariya My Love! 🎉</h2>
+    <p style="color:#d63384; font-size:1.2rem;">Let’s relive your special memories...</p>
+  </div>
+
+  <h1>💖 YOur Special Memories 💖</h1>
+
+  <div class="gallery">
+    <img src="./images/img.jpg" alt="Memory 1">
+    <img src="./images/img-2.jpg" alt="Memory 2">
+    <img src="./images/img-3.jpg" alt="Memory 3">
+    <img src="./images/img4.jpg" alt="Memory 4">
+     <img src="./images/WhatsApp Image 2025-12-12 at 19.46.44_62c13a31.jpg" alt="Memory 4">
+      <img src="./images/WhatsApp Image 2025-12-12 at 19.42.04_f7ef1cf9.jpg" alt="Memory 4">
+       <img src="./images/WhatsApp Image 2025-12-12 at 21.34.23_3c924716.jpg" alt="Memory 4">
+        <img src="./images/WhatsApp Image 2025-12-12 at 21.34.22_426bb0fe.jpg" alt="Memory 4">
+       
+    <video controls autoplay muted loop>
+      <source src="./vedio/WhatsApp Video 2025-07-15 at 21.49.26_221fa07b.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video controls autoplay muted loop>
+      <source src="./vedio/ssstik.io_@aishwariya_11_1765551261823.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video controls autoplay muted loop>
+      <source src="./vedio/ssstik.io_@aishwariya_11_1765551296705.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video controls autoplay muted loop>
+      <source src="./vedio/ssstik.io_@aishwariya_11_1765551401785.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+     <video controls autoplay muted loop>
+      <source src="./vedio/WhatsApp Video 2025-12-12 at 21.33.52_167d8fd7.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+     <video controls autoplay muted loop>
+      <source src="./vedio/WhatsApp Video 2025-12-12 at 21.33.58_792b38b0.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  
+
+  <button class="btn" onclick="window.location.href='index.html'">⬅ Back to Surprise</button>
+
+<div class="hearts" id="hearts"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
